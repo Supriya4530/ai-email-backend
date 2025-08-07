@@ -56,7 +56,13 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.get('/', (req, res) => {
+  res.send('✅ AI Email Backend is running!');
 });
+
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`🚀 AI Email Backend running at http://localhost:${PORT}`);
+});
+
